@@ -1,0 +1,90 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+/*ruudulle jäävät tyhjät tilat/palkit  hoituu tällä pois*/
+html {
+	height: 100%;
+}
+body{
+	height: 100%;
+	width: 100%;
+	font-family: 'Copperplate Gothic';
+	margin: 0;
+	background-attachment: fixed;
+	overflow-x: hidden;
+}
+.grass{/* taustalla liehuva nurmikko*/
+	z-index: -1;
+	position:fixed;
+	top:5%;
+	width: 100%;
+	height: 100%;
+	background-image:url(grass.png);
+	background-repeat: no-repeat;
+	filter: blur(1px);
+	animation: skew 13s infinite;
+	/*transform: skew;*/
+	animation-direction: alternate;
+}
+@keyframes skew {
+0% {
+	transform: skewX(7deg) translate(-3vw);
+}
+100% {
+	transform: skewX(-7deg) translate(1vw);
+}
+}
+
+.items{
+	margin-top: 25vh;
+	height: 200vh;
+	width: 100vw;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+.items div{
+	flex: 1 1 50%;
+	width: 0;
+	margin-left:0.5vw;
+	margin-right:0.5vw;
+	margin-bottom:0.5vh;
+	margin-top:0.5vh;
+	padding: 1vh;
+	max-width: 30vw;
+}
+.items p{
+	color: rgb(14, 88, 70);
+	padding: 1%;
+}
+.items img{
+	width: 50%;
+	height: 50%;
+	margin: 1em;
+	border-radius: 20%;
+	max-width: 100%;
+	height: auto;
+	opacity: 0.7;
+}
+.description{
+	background-size:100%;
+	border-bottom: 5px solid white;
+	height: 100%;
+	background-image: url('hero2.png');
+}
+.description p{
+	top: 10px;
+	text-align: center;
+	font-size: 4vw;
+	padding: 2%;
+	position:relative;
+	left: 5px;
+	color: white;
+}
