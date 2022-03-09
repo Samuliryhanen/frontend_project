@@ -75,7 +75,8 @@ body{
 }
 .description{
 	background-size:100%;
-	border-bottom: 5px solid white;
+	box-shadow: inset 12px 12px 53px 12px #282a2d;
+	filter: drop-shadow(10px 1em 1em  #282a2d);
 	height: 100%;
 	background-image: url('hero2.png');
 }
